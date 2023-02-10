@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getStorage } from "firebase/storage";
 
 // "Cloud Firestore"는 "NoSQL" 기반 데이터베이스 제공
 // 폴더 개념의 Collection이 있고, 안에 documents들이 속해있다. (즉, Collection은 documents 그룹)
@@ -15,7 +16,6 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-
-export const auth = getAuth();
-
+export const auth = getAuth(app);
 export const db = getFirestore(app);
+export const storage = getStorage(app);
