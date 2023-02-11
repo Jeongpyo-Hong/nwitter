@@ -67,6 +67,7 @@ const NweetFactory = ({ userObj }) => {
         type="text"
         placeholder="What's on your mind?"
         maxLength={120}
+        required
       />
       <input type="file" accept="image/*" onChange={onFileChange} />
       <input type="submit" value="Nweet" />
